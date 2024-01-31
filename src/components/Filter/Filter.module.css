@@ -1,0 +1,10 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.filterInput {
+  padding: 10px;
+  margin-bottom: 10px;
+}
