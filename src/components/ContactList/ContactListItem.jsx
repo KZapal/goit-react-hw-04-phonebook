@@ -1,7 +1,7 @@
 import css from './ContactList.module.css';
 import PropTypes from 'prop-types';
 
-const ContactListItem = ({ id, name, number, onClick }) => {
+const ContactListItem = ({ name, number, onClick }) => {
   return (
     <li className={css.item}>
       <div className={css.itemIn}>
@@ -17,10 +17,9 @@ const ContactListItem = ({ id, name, number, onClick }) => {
 };
 
 ContactListItem.propTypes = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  name: PropTypes.string,
+  number: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default ContactListItem;
