@@ -12,11 +12,17 @@ const ContactForm = ({ handleSubmit }) => {
     setNumber('');
   };
 
+  const parseNumber = number => {
+    const groups = number.match(/(\d{1,3})/g);
+    const formattedString = groups.join('-');
+    return formattedString;
+  };
+
   const addContact = event => {
     event.preventDefault();
     let newContact = {
       name: name,
-      number: number,
+      number: parseNumber(number),
       id: nanoid(),
     };
     handleSubmit(newContact);

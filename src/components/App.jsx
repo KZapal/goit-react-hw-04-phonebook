@@ -1,20 +1,9 @@
 import React, { useState, useEffect } from 'react';
-// import Form from './Form/Form';
-// import { nanoid } from 'nanoid';
+import getContactsLocalStorage from './localStorage';
 import ContactForm from './Form/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 import css from './App.module.css';
-
-const getContactsLocalStorage = () => {
-  const savedContacts = JSON.parse(localStorage.getItem('contacts'));
-
-  if (savedContacts) {
-    return savedContacts;
-  } else {
-    return [];
-  }
-};
 
 const App = () => {
   const [contacts, setContacts] = useState(getContactsLocalStorage());
